@@ -9,7 +9,7 @@ def home(request):
         "endpoints":{
             'search': '/homedepot/search?keyword=<keyword>&sort_by=<sort_by>&page=<page>',
             'specific_product': '/homedepot/product?item_id=<item_id>',
-            'review': '/homedepot/product/review?item_id=<item_id>&sort_by=<sort_by>&page=<page>',
+            'review': '/homedepot/product/reviews?item_id=<item_id>&sort_by=<sort_by>&page=<page>',
         }
     }
     return JsonResponse(response)
