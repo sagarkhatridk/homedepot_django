@@ -5,7 +5,12 @@ import json
 # Create your views here.
 def home(request):
     response = {
-        "Greetings":"Welcome to Homedepot APIs"
+        "Greetings":"Welcome to Homedepot APIs",
+        "endpoints":{
+            'search': '/homedepot/search?keyword=<keyword>&sort_by=<sort_by>&page=<page>',
+            'specific_product': '/homedepot/product?item_id=<item_id>',
+            'review': '/homedepot/product/review?item_id=<item_id>&sort_by=<sort_by>&page=<page>',
+        }
     }
     return JsonResponse(response)
 
