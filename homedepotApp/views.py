@@ -109,7 +109,7 @@ def search_by_keyword(request):
             sponsored = product['info']['isSponsored']
             if sponsored != True:
                 item = dict()
-                try:canonicalUrl = f"https://www.homedepot.com/{product['identifiers']['canonicalUrl']}"
+                try:canonicalUrl = f"https://www.homedepot.com{product['identifiers']['canonicalUrl']}"
                 except:canonicalUrl = None
                 try:brandName = product['identifiers']['brandName']
                 except:brandName = None
